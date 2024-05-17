@@ -1,10 +1,9 @@
 // Recibe como prop name e email
 import RobotsList from "./RobotsList"
 
-function Card({}){
+function Card({name, email}){
     return(
         <div className="column is-one-quarter">
-
             <div className="card">
                 <div className="card-image">
                     <figure className="image is-4by3">
@@ -20,9 +19,9 @@ function Card({}){
                     <div className="media">
                         <div className="media-content">
                             
-                            <p className="title is-4"> </p>
+                            <p className="title is-4">{name}</p>
 
-                            <p className="subtitle is-6"> </p>
+                            <p className="subtitle is-6">{email}</p>
                         </div>
                     </div>
                 </div>

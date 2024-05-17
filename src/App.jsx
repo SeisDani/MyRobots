@@ -1,10 +1,8 @@
 // Haga la importaciones necesarias como dice el documento
 import { useState } from "react"
+import { searchRobots } from "./Api"
 import SearchBar from './components/SearchBar'
 import RobotsList from './components/RobotsList'
-import searchRobots from "./Api"
-
-//searchRobots()
 
 function App() {
   // Cree un estado robots de tipo ([]) utilizando useState
@@ -12,11 +10,9 @@ function App() {
 
   // Construya una funcions handleSubmit asyncrona que recibe como paramentro term
     const handleSubmit = async(term) => {
-    console.log('usted esta buscando con:', term)
     const result = await searchRobots(term)
 
     setRobots(result)
-
   }
 
   return (
@@ -28,4 +24,4 @@ function App() {
   )
 }
 
-export default App  
+export default App
